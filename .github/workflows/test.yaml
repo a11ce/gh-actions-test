@@ -1,0 +1,16 @@
+name: "Do Things"
+on:
+  workflow_dispatch:
+
+jobs:
+  thing:
+    name: Do Something
+    runs-on: macos-13
+    steps:
+      - name: install macports and freetype
+        uses: melusina-org/setup-macports@v1
+        with:
+          parameters: '.github/macports/macports.yml'
+      - name: test
+        run: |
+          port
