@@ -8,7 +8,8 @@ jobs:
     runs-on: macos-13
     steps:
       - name: install macports and freetype
-        uses: melusina-org/setup-macports@v1
+      - uses: actions/checkout@v3
+      - uses: melusina-org/setup-macports@v1
         with:
           parameters: '.github/macports/macports.yaml'
       - name: test
