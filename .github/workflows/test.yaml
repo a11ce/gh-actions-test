@@ -13,5 +13,5 @@ jobs:
         uses: melusina-org/setup-macports@v1
       - name: port install freetype
         run: |
-          port -d sync
-          port install freetype
+          sudo port sync
+          sudo port install freetype
